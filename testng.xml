@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="MidTransAutomation" verbose="1">
+	<listeners>
+		<listener class-name="com.midTrans.listeners.ReportingListener" />
+	</listeners>
+	<test name="Test end to end pillow purchase scenario">
+		<classes>
+			<class name="com.midTrans.test.checkout.PaymentFlowTest">
+				<methods>
+					<include name="testSuccessFlow" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Negative scenario to test pillow purchase">
+		<classes>
+			<class name="com.midTrans.test.checkout.PaymentFlowTest">
+				<methods>
+					<include name="testFailureFlow" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
