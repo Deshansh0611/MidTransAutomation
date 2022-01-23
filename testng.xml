@@ -1,11 +1,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="MidTransAutomation" verbose="1">
 	<listeners>
-		<listener class-name="com.midTrans.listeners.ReportingListener" />
+		<listener class-name="main.java.listeners.ReportingListener" />
 	</listeners>
 	<test name="Test end to end pillow purchase scenario">
 		<classes>
-			<class name="com.midTrans.test.checkout.PaymentFlowTest">
+			<class name="main.java.utility.PaymentFlowTest">
 				<methods>
 					<include name="testSuccessFlow" />
 				</methods>
@@ -14,7 +14,7 @@
 	</test>
 	<test name="Negative scenario to test pillow purchase">
 		<classes>
-			<class name="com.midTrans.test.checkout.PaymentFlowTest">
+			<class name="main.java.utility.PaymentFlowTest">
 				<methods>
 					<include name="testFailureFlow" />
 				</methods>
